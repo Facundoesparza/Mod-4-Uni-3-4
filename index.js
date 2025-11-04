@@ -14,6 +14,19 @@ const PORT = 4000;
         res.send("Productoos");
     });
 
+// unidad 4
+    
+app.get("/:nombre", (req, res)=>{
+    const nombreUsuario = req.params.nombre;
+    if(nombreUsuario === "facundo"){
+        res.send("Hola facundo");
+    }else if(nombreUsuario === "lolo"){
+        res.send("Hola lolo");
+    } else {
+    res.send(`No tengo datos para el usuario: ${nombreUsuario}`);
+  }
+})
+
     app.listen(PORT, () =>{
         console.log(`Servidor funcionando en http://localhost:${PORT}`);
     })
